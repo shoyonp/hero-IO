@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
     <div className="text-center space-y-7">
       <h2 className="font-bold text-5xl">
-        We Build <br />{" "}
+        We Build <br />
         <span className="font-extrabold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
           Productive
-        </span>{" "}
+        </span>
         Apps
       </h2>
       <p className="text-[#627382] w-4/5 lg:w-2/4  mx-auto">
@@ -15,26 +16,26 @@ const Hero = () => {
         simpler, smarter, and more exciting.Our goal is to turn your ideas into
         digital experiences that truly make an impact.
       </p>
-      <button className="btn mr-3">
+      <Link to="https://play.google.com/" className="btn mr-3">
         <div className="flex items-center gap-1">
           <img
             className="w-5"
             src="/src/assets/icons8-play-store-48.png"
             alt=""
-          />{" "}
+          />
           <span>Google Play</span>
         </div>
-      </button>
-      <button className="btn">
+      </Link>
+      <Link to="https://www.apple.com/app-store/" className="btn">
         <div className="flex items-center gap-1">
           <img
             className="w-5"
             src="/src/assets/icons8-app-store-48.png"
             alt=""
-          />{" "}
+          />
           <span>App Store</span>
         </div>
-      </button>
+      </Link>
       <div>
         <img
           src="/src/assets/hero.png"

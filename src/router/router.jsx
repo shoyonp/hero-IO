@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../pages/Home";
 import Apps from "../pages/Apps";
 import Installation from "../pages/Installation";
+import AppDetail from "../pages/AppDetail";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: "installation",
         Component: Installation,
+      },
+      {
+        path: "appDetail/:id",
+        loader: () => fetch("apps.json"),
+        Component: AppDetail,
       },
     ],
   },

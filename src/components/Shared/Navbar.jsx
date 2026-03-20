@@ -76,7 +76,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-1">
             <img src="/src/assets/logo.png" alt="logo" className="h-8 w-8" />
-            <Link className="text-sm font-bold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
+            <Link to="/" className="text-sm font-bold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
               HERO.IO
             </Link>
           </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
+          <Link to="https://github.com/shoyonp/" className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
             <FaGithub size={17} /> Contribute
           </Link>
         </div>
