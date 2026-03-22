@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
+import navLogo from "../../assets/logo.png"
 
 const Navbar = () => {
   const links = (
@@ -75,7 +76,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-1">
-            <img src="/src/assets/logo.png" alt="logo" className="h-8 w-8" />
+            <img src={navLogo} alt="logo" className="h-8 w-8" />
             <Link to="/" className="text-sm font-bold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
               HERO.IO
             </Link>

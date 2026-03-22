@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
+import hero from "../assets/hero.png";
+import playStore from "../assets/icons8-play-store-48.png";
+import AppStore from "../assets/icons8-app-store-48.png";
 
 const Hero = () => {
   return (
@@ -18,30 +21,18 @@ const Hero = () => {
       </p>
       <Link to="https://play.google.com/" className="btn mr-3">
         <div className="flex items-center gap-1">
-          <img
-            className="w-5"
-            src="/src/assets/icons8-play-store-48.png"
-            alt=""
-          />
+          <img className="w-5" src={playStore} alt="" />
           <span>Google Play</span>
         </div>
       </Link>
       <Link to="https://www.apple.com/app-store/" className="btn">
         <div className="flex items-center gap-1">
-          <img
-            className="w-5"
-            src="/src/assets/icons8-app-store-48.png"
-            alt=""
-          />
+          <img className="w-5" src={AppStore} alt="" />
           <span>App Store</span>
         </div>
       </Link>
       <div>
-        <img
-          src="/src/assets/hero.png"
-          alt="hero"
-          className="mx-auto px-10 lg:px-0"
-        />
+        <img src={hero} alt="hero" className="mx-auto px-10 lg:px-0" />
         <div className="bg-linear-to-bl from-[#632EE3] to-[#9F62F2] p-8 md:p-11 space-y-7 text-white">
           <h4 className="font-bold text-3xl">
             Trusted by Millions, Built for You
