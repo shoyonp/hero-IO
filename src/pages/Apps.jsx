@@ -1,18 +1,20 @@
 import React from "react";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/AppCard";
+import SectionTitle from "../components/Shared/sectionTitle";
 
 const Apps = () => {
   const { data, loading } = useApps();
 
   return (
     <>
-      <div className="text-center space-y-7">
-        <h3 className="font-bold text-4xl">Our All Applications</h3>
-        <p className="text-[#627382]">
-          Explore All Apps on the Market developed by us. We code for Millions
-        </p>
-      </div>
+      <SectionTitle
+        heading={"Our All Applications"}
+        subHeading={
+          "Explore All Apps on the Market developed by us. We code for Millions"
+        }
+      />
+
       <div className="flex px-10 mt-10 mb-4 mx-auto justify-between items-center">
         <p className="font-bold ">({data.length}) Apps Found</p>
         {/* search field */}

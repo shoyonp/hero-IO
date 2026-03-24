@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/AppCard";
 import { Link } from "react-router";
+import SectionTitle from "../components/Shared/sectionTitle";
 
 const Home = () => {
   const { data, loading } = useApps();
@@ -10,12 +11,11 @@ const Home = () => {
     <div className="space-y-10">
       <Hero />
 
-      <div className="text-center space-y-7">
-        <h3 className="font-bold text-4xl">Trending Apps</h3>
-        <p className="text-[#627382]">
-          Explore All Trending Apps on the Market developed by us
-        </p>
-      </div>
+      <SectionTitle
+        heading={"Trending Apps"}
+        subHeading={"Explore All Trending Apps on the Market developed by us"}
+      />
+
       <div className="">
         {loading ? (
           <div className="flex justify-center items-center py-12">
@@ -31,11 +31,11 @@ const Home = () => {
       </div>
       <div className="w-11/12 mx-auto flex justify-center">
         <Link
-        to="/apps"
-        className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]"
-      >
-         Show All
-      </Link>
+          to="/apps"
+          className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]"
+        >
+          Show All
+        </Link>
       </div>
     </div>
   );
