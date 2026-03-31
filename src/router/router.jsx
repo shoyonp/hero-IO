@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Apps from "../pages/Apps";
 import Installation from "../pages/Installation";
 import AppDetail from "../pages/AppDetail";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
           return res.json();
         },
         Component: AppDetail,
+      },
+      {
+        path: "*",
+        Component: ErrorPage,
       },
     ],
   },

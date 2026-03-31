@@ -9,7 +9,7 @@ const Footer = () => {
           <p className="font-medium text-sm">HERO.IO</p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
-          <p>Social Links</p>
+          <p className="mb-2 text-sm">Social Links</p>
           <div className="flex items-center gap-4">
             <a>
               <svg
