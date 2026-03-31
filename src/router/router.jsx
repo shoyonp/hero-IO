@@ -20,15 +20,12 @@ const router = createBrowserRouter([
       },
       {
         path: "installation",
-        loader: async () => {
-          const res = await fetch("/apps.json");
-          return res.json();
-        },
+        loader: () => fetch("/apps.json"),
         Component: Installation,
       },
       {
         path: "appDetail/:id",
-        loader: () => fetch("apps.json"),
+        loader: () => fetch("/apps.json"),
         Component: AppDetail,
       },
     ],

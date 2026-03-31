@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { getStoredApp } from "../utility/addToLs";
 import SectionTitle from "../components/Shared/sectionTitle";
+import InstallAppCard from "../components/InstallAppCard";
 
 const Installation = () => {
   const [apps, setApps] = useState([]);
@@ -9,11 +10,10 @@ const Installation = () => {
 
   useEffect(() => {
     const storedAppData = getStoredApp();
-    console.log(storedAppData);
     const convertedId = storedAppData.map((id) => parseInt(id));
     const installedApp = data?.filter((app) => convertedId.includes(app.id));
     setApps(installedApp);
-  }, []);
+  }, [data]);
 
   return (
     <div>
@@ -21,9 +21,11 @@ const Installation = () => {
         heading={"Your Installed Apps"}
         subHeading={"Explore All Trending Apps on the Market developed by us"}
       />
-      <div className="flex justify-between items-center">
+      <section className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-10 mb-6">
         {/* app length */}
-        <span>{apps.length} Apps Found</span>
+        <p className="font-semibold text-gray-800 text-sm sm:text-base">
+          ({apps.length}) Apps Found
+        </p>
         {/* sorting button */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn m-1">
@@ -41,7 +43,12 @@ const Installation = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
+      <section className="space-y-5">
+        {apps.map((app) => (
+          <InstallAppCard key={app.id} app={app} />
+        ))}
+      </section>
     </div>
   );
 };

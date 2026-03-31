@@ -1,7 +1,9 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
-import navLogo from "../../assets/logo.png"
+import navLogo from "../../assets/logo.png";
+import { CiMenuBurger } from "react-icons/ci";
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   const links = (
@@ -47,25 +49,11 @@ const Navbar = () => {
 
   return (
     <div className="bg-base-100 shadow-sm">
-      <div className="navbar md:px-10 ">
+      <div className="navbar w-11/12 mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
+            <div tabIndex={0} role="button" className="lg:hidden">
+              <IoMdMenu size={20} />
             </div>
             <ul
               tabIndex="-1"
@@ -75,9 +63,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 ml-3">
             <img src={navLogo} alt="logo" className="h-8 w-8" />
-            <Link to="/" className="text-sm font-bold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
+            <Link
+              to="/"
+              className="text-sm font-bold bg-clip-text text-transparent bg-linear-to-bl from-[#632EE3] to-[#9F62F2]"
+            >
               HERO.IO
             </Link>
           </div>
@@ -88,7 +79,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="https://github.com/shoyonp/" className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]">
+          <Link
+            to="https://github.com/shoyonp/"
+            className="btn text-white font-medium bg-linear-to-bl from-[#632EE3] to-[#9F62F2]"
+          >
             <FaGithub size={17} /> Contribute
           </Link>
         </div>

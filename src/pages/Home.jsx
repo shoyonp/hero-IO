@@ -22,8 +22,8 @@ const Home = () => {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-10">
-            {data.slice(0, 8).map((app) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 w-11/12 mx-auto">
+            {data.slice(0, 5).map((app) => (
               <AppCard key={app.id} app={app} />
             ))}
           </div>
